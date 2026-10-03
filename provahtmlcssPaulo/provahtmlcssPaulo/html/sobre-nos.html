@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sobre nós | Planeta em foco</title>
+</head>
+<body>
+    <div class="capa">
+        <div class="linha-superior">
+            <span>Observatório ambiental</span>
+            <span>Edição 01 <i></i> Meio ambiente</span>
+            <nav class="navegacao" aria-label="Navegação principal">
+                <details class="menu">
+                    <summary class="link-menu botao-menu">Menu</summary>
+                    <div class="opcoes-menu">
+                        <a class="link-menu" href="../index.html">Início</a>
+                        <a class="link-menu" href="sobre-nos.html">Sobre nós</a>
+                        <a class="link-menu" href="projetos.html">Projetos</a>
+                        <a class="link-menu" href="feitos.html">Feitos</a>
+                        <a class="link-menu" href="blog.html">Blog</a>
+                        <a class="link-menu" href="comoajudar.html">Como ajudar</a>
+                        <a class="link-menu" href="voluntario.html">Voluntarie-se</a>
+                        <a class="link-menu" href="campanhas.html">Campanhas</a>
+                        <a class="link-menu" href="galeria.html">Galeria</a>
+                        <a class="link-menu" href="contatos.html">Contatos</a>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <div class="destaque">
+            <img class="imagem-planeta" src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=400&q=85" alt="Planeta Terra visto do espaço">
+            <div class="texto-destaque">
+                <p class="subtitulo">Quem somos</p>
+                <h1>Sobre nós</h1>
+                <p class="descricao">Conheça a proposta e as pessoas por trás do Planeta em foco.</p>
+            </div>
+        </div>
+        <div class="linha-inferior">
+            <span>IMPACTO <b>+</b> CONSCIÊNCIA <b>+</b> MUDANÇA</span>
+            <button class="seta-rolagem" type="button" aria-label="Ir para o final da página">↓</button>
+        </div>
+    </div>
+    <main>
+        <section class="temas" aria-label="Sobre nós">
+            <div class="titulo-secao">
+                <p class="subtitulo">Nossa iniciativa</p>
+                <h2>Sobre o projeto</h2>
+            </div>
+            <h2>Quem somos?</h2>
+            <br>
+            <hr>
+            <br>
+            <p class="texto-secao">Mais do que um projeto voltado apenas para ajudar o meio ambiente, o Planeta em Foco nasceu para trazer à atenção aquilo que muitas vezes deixamos de enxergar.
+
+            Somos um projeto criado para aproximar pessoas que amam o meio ambiente e sentem o desejo de cuidar daquilo que, muitas vezes, é deixado de lado: os espaços onde vivemos.
+
+            Queremos reunir todos aqueles que desejam contribuir para uma cidade, um estado e um país melhor, dando atenção a lugares que muitas vezes não recebem a importância que merecem.</p>
+            <br>
+             <h2>Nosso objetivo</h2>
+            <br>
+            <hr>
+            <br>
+            <p class="texto-secao">é contribuir para cidades mais limpas, organizadas e sustentáveis, criando oportunidades para que as pessoas deixem de ser apenas observadoras e passem a participar diretamente da transformação dos espaços ao seu redor.
+
+            Para tornar isso possível, criamos este site como uma ferramenta de conexão. Aqui, divulgamos projetos, campanhas e eventos ambientais, aproximando voluntários das ações e tornando seu cadastro mais simples e acessível.
+
+            Mas não queremos apenas prometer mudanças. Queremos mostrar o que foi feito. Por isso, registramos nossas ações e seus resultados, permitindo que cada pessoa veja o impacto daquilo que ajudou a construir.
+
+            Porque acreditamos que transformar um lugar começa quando alguém decide olhar para ele.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Planeta em Foco conectando pessoas para transformar lugares.</h2>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollButton = document.querySelector('.seta-rolagem');
+
+            if (!scrollButton) return;
+
+            const goToBottom = () => {
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth'
+                });
+            };
+
+            scrollButton.addEventListener('click', goToBottom);
+            scrollButton.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    goToBottom();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

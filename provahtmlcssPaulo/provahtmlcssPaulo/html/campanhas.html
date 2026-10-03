@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Campanhas | Planeta em foco</title>
+  </head>
+  <body>
+    <div class="capa">
+      <div class="linha-superior">
+        <span>Observatório ambiental</span>
+        <span>Edição 01 <i></i> Meio ambiente</span>
+        <nav class="navegacao" aria-label="Navegação principal">
+          <details class="menu">
+            <summary class="link-menu botao-menu">Menu</summary>
+            <div class="opcoes-menu">
+              <a class="link-menu" href="../index.html">Início</a>
+              <a class="link-menu" href="sobre-nos.html">Sobre nós</a>
+              <a class="link-menu" href="projetos.html">Contato</a>
+              <a class="link-menu" href="feitos.html">Feitos</a>
+              <a class="link-menu" href="blog.html">Blog</a>
+              <a class="link-menu" href="comoajudar.html">Como ajudar</a>
+              <a class="link-menu" href="voluntario.html">Voluntarie-se</a>
+              <a class="link-menu" href="campanhas.html">Campanhas</a>
+              <a class="link-menu" href="galeria.html">Galeria</a>
+              <a class="link-menu" href="contatos.html">Contatos</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+      <div class="destaque">
+        <img
+          class="imagem-planeta"
+          src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=400&q=85"
+          alt="Planeta Terra visto do espaço"
+        />
+        <div class="texto-destaque">
+          <p class="subtitulo">Ações coletivas</p>
+          <h1>Campanhas</h1>
+          <p class="descricao">
+            Conheça as campanhas de conscientização do projeto.
+          </p>
+        </div>
+      </div>
+      <div class="linha-inferior">
+        <span>IMPACTO <b>+</b> CONSCIÊNCIA <b>+</b> MUDANÇA</span>
+        <button
+          class="seta-rolagem"
+          type="button"
+          aria-label="Ir para o final da página"
+        >
+          ↓
+        </button>
+      </div>
+    </div>
+    <main>
+      <section class="temas" aria-label="Campanhas">
+        <div class="titulo-secao">
+          <p class="subtitulo">Participe</p>
+          <h2>Campanhas ambientais</h2>
+        </div>
+        <p class="texto-secao">
+          Apresente aqui as campanhas, suas datas e formas de participação.
+        </p>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <p>&copy; 2026 Planeta em foco. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollButton = document.querySelector(".seta-rolagem");
+
+        if (!scrollButton) return;
+
+        const goToBottom = () => {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth",
+          });
+        };
+
+        scrollButton.addEventListener("click", goToBottom);
+        scrollButton.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            goToBottom();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
